@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:orientation="vertical"
+    android:background="#BE800000"
+    tools:context=".InfosFragment">
+
+    <TextView
+        android:id="@+id/textViewComName"
+        style="@android:style/Widget.Material.TextView.SpinnerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="@android:color/background_dark"
+        android:textSize="18dp"
+        tools:text="Community Name" />
+
+    <ImageView
+        android:id="@+id/imageViewBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="@android:color/background_dark"
+        android:textSize="15dp"
+        tools:text="Description" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageViewLeader"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewLeaderName"
+            app:layout_constraintEnd_toStartOf="@+id/instagram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.078"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/textViewLeaderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="@android:color/background_dark"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewLeader"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="@+id/imageViewLeader"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLeader"
+            tools:text="LeaderName" />
+
+        <ImageButton
+            android:id="@+id/instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_instagram"
+            app:layout_constraintBottom_toTopOf="@+id/youtube"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLeader" />
+
+        <ImageButton
+            android:id="@+id/meetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:src="@drawable/ic_meetup"
+            app:layout_constraintStart_toEndOf="@+id/instagram"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_twitter"
+            app:layout_constraintEnd_toStartOf="@+id/youtube"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/instagram"
+            app:layout_constraintTop_toBottomOf="@+id/instagram" />
+
+        <ImageButton
+            android:id="@+id/youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_youtube"
+            app:layout_constraintStart_toStartOf="@+id/meetup"
+            app:layout_constraintTop_toBottomOf="@+id/meetup" />
+
+        <ImageButton
+            android:id="@+id/homePage"
+            android:layout_width="56dp"
+            android:layout_height="61dp"
+            android:background="@null"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
